@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  questions: MyText
+  answer_one: MyText
+  answer_two: MyText
+  answer_three: MyText
+  correct_answer: MyString
+
+two:
+  questions: MyText
+  answer_one: MyText
+  answer_two: MyText
+  answer_three: MyText
+  correct_answer: MyString

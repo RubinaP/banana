@@ -1,4 +1,7 @@
 Banana::Application.routes.draw do
+  resources :questions
+
+
   root :to => redirect('/ideas')
   resources :ideas
 
