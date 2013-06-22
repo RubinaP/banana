@@ -1,1 +1,5 @@
-Your Answer is <%= @result %>
+<h2>Your Answer is <%= @result %></h2>
+
+<% if @result=="WRONG" %>
+	<p><%= link_to 'Have another guess', guess_question_path(@question) %></p>
+<% end %>
