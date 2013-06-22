@@ -30,6 +30,14 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def answer
+    @question = Question.find(params[:id])
+    if @question.correct_answer == params[:answer]
+      @result = "RIGHT"
+    else
+      @result = "WRONG"
+    end
+  end
   # GET /questions/new
   # GET /questions/new.json
   def new

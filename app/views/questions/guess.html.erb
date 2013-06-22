@@ -1,30 +1,28 @@
 <p id="notice"><%= notice %></p>
-
+<h1> Take a guess... </h1>
 <p>
   <b>Questions:</b>
   <%= @question.questions %>
 </p>
-
+<%= form_tag(answer_question_path) do %>
 <p>
   <b>Answer one:</b>
-  <%= @question.answer_one %>
+  <%= radio_button_tag(:answer, '1') %>
+  <%= label_tag(:answer_1, @question.answer_one) %>
 </p>
 
 <p>
   <b>Answer two:</b>
-  <%= @question.answer_two %>
+ <%= radio_button_tag(:answer, '2') %>
+  <%= label_tag(:answer_2, @question.answer_two) %>
 </p>
 
 <p>
   <b>Answer three:</b>
-  <%= @question.answer_three %>
+  <%= radio_button_tag(:answer, '3') %>
+  <%= label_tag(:answer_3, @question.answer_three) %>
 </p>
-
 <p>
-  <b>Correct answer:</b>
-  <%= @question.correct_answer %>
+  <%= submit_tag("Submit Answer") %>
 </p>
-
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<% end %>

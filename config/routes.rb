@@ -2,6 +2,7 @@ Banana::Application.routes.draw do
   resources :questions do
     member do
       get 'guess'
+      post 'answer'
     end
   end
 
